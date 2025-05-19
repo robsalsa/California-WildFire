@@ -7,8 +7,11 @@ import {Link} from "react-router-dom";
 const Header = () =>{
     return (
         <header className= "Header">
+            <header>
+                <h1>California Fires</h1>
+            </header>
             <Menu>
-                <a classname="menu-item" href="/">Home</a>
+                <a className="menu-item" href="/">Home</a>
 
                 <a href ="/#thing1">Thing1</a>
                 <a href ="/#thing2">Thing2</a>
