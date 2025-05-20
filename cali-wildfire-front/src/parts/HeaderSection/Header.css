@@ -1,0 +1,59 @@
+header{
+    position: sticky;
+    padding-top: 50px;
+    width:100%;
+    background-color: rgba(255, 255, 255,0.8);
+    z-index:100;
+    text-align:center;
+    top:0;
+    position:sticky;
+    box-shadow:0.2px 5px rgba(0,0,0,0.1);
+}
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    font-style: italic;
+}
+
+nav a {
+    color: #f5f3f3;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #c7a37a;
+}
+
+/* bunger options */
+.bm-burger-button {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    left: 20px;
+    top: 20px;
+}
+
+.bm-burger-bars{
+    background:#ffffff;
+}
+
+.bm-burger-bars-hover {
+  background: #000000;
+}
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+/* background ghost options  */
+.bm-menu {
+  background: #543A14;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
