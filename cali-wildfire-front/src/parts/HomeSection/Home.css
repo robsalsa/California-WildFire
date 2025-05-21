@@ -82,6 +82,14 @@ nav button:hover{
     width: 100%;
     height: 100%;
 }
+/* I think that these two are the only ones that matter for this page. These two are for maps.
+Depending on what Map API you are using this could be drastically different so keep that in mind.
+
+Check out the Header.css for better explanations of some of these things.
+A lot are very similar also they are easy to check just mess wiht the color and youll see where each section
+is.  */
+
+
 
 .sidebar {
     flex: 1;
@@ -100,3 +108,4 @@ nav button:hover{
 .sidebar h2 {
     margin-top: 0;
 }
+
