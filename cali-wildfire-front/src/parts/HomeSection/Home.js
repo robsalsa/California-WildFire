@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+import MapContainer from "../MapSection/MapContainer";
+
 import "./Home.css";
 
 
@@ -19,11 +22,10 @@ export const Home = () => {
                     <h2>Local Fire & Other News</h2>
                     <div className="main-content">
                         <section id="fire-map-view" className="view-box">
-                            {/* <h2>Local Fire & Other News</h2> */}
-                            {/* <div id="map-container"> */}
-                            <div id="actual-map">Map Here!1!</div>
-                            {/* PUT THE MAP HERE PLEASE AHHHHHHHHHHHHHHHH!! */}
-                            {/* </div> */}
+                           <div id= "actual-map" style={{height: "500px", width: "100%"}}>
+                                <MapContainer />
+                            
+                           </div>
                         </section>
                     </div>
                 </section>
