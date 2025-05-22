@@ -7,6 +7,8 @@ const containerStyle ={
     height: '500px'
 };
 
+// this might not be needed... I think 
+
 const center ={
     lat: 34.009242,
     lng: -118.497604

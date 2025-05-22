@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import MapContainer from '../MapSection/MapContainer';
+// API is needed for this to work
 import "./Home.css";
 
 
@@ -19,19 +21,11 @@ export const Home = () => {
                     <h2>Local Fire & Other News</h2>
                     <div className="main-content">
                         <section id="fire-map-view" className="view-box">
-<<<<<<< HEAD
                            <div id= "actual-map" style={{height: "100%", width: "700px"}}>
                                 {/* Map size is kinda stuck here because im scared to move it into the CSS */}
                                 <MapContainer />
                             
                            </div>
-=======
-                            {/* <h2>Local Fire & Other News</h2> */}
-                            {/* <div id="map-container"> */}
-                            <div id="actual-map">Map Here!1!</div>
-                            {/* PUT THE MAP HERE PLEASE AHHHHHHHHHHHHHHHH!! */}
-                            {/* </div> */}
->>>>>>> parent of 545854d (Map Function Is (almost) Up and Running!)
                         </section>
                     </div>
                 </section>
