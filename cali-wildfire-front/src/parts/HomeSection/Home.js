@@ -22,7 +22,8 @@ export const Home = () => {
                     <h2>Local Fire & Other News</h2>
                     <div className="main-content">
                         <section id="fire-map-view" className="view-box">
-                           <div id= "actual-map" style={{height: "500px", width: "100%"}}>
+                           <div id= "actual-map" style={{height: "100%", width: "700px"}}>
+                                {/* Map size is kinda stuck here because im scared to move it into the CSS */}
                                 <MapContainer />
                             
                            </div>
@@ -37,6 +38,12 @@ export const Home = () => {
                     </section>
                 </aside>
             </main>
+
+            <div className="under-home-container">
+                <h1>maybe graphs can go here either as a baked-in thing or a component like the Map container</h1>
+            </div>
+
+
         </div>
     );
 };
