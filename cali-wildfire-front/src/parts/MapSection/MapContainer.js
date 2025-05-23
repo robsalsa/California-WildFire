@@ -1,7 +1,7 @@
 import React from "react";
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
-request('dotenv').config();
+// request('dotenv').config();  i guess i can go screw myself huh
 
 const containerStyle ={
     width: '100%',

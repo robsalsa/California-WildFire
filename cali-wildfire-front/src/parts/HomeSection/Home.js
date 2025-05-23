@@ -23,6 +23,7 @@ export const Home = () => {
                         <section id="fire-map-view" className="view-box">
                            <div id= "actual-map" style={{height: "100%", width: "700px"}}>
                                 {/* Map size is kinda stuck here because im scared to move it into the CSS */}
+                                <MapContainer />
                                 {/* <MapContainer /> */}
                             
                            </div>
