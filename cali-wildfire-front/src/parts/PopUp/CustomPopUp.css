@@ -1,0 +1,24 @@
+.popup-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -100%);
+}
+
+.popup-bubble-anchor {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.popup-bubble {
+  background-color: white;
+  border-radius: 6px;
+  padding: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  max-width: 250px;
+  font-size: 14px;
+}

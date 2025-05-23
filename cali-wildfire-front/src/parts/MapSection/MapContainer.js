@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import Papa from "papaparse";
-import CustomPopup from "../MapPopUp/CustomPopUp";
+import PopUP from "../PopUp/PopUP";
 
 
 const containerStyle = {
@@ -18,6 +18,9 @@ function MapContainer() {
     const [ubicacion, setUbicacion] = useState([]);
     const [select, setSelect] = useState(null);
 
+    const mapref = useRef(null);
+    const popupContentRef = useRef(null);
+
     useEffect(() => {
         fetch("/mapdataall.csv")
             .then((response) => response.text())
@@ -29,7 +32,15 @@ function MapContainer() {
 
     return (
         <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAP_API}>
-            <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
+            <GoogleMap 
+                mapContainerStyle={containerStyle} 
+                center={center} 
+                zoom={10}
+                onLoad={(map) =>{
+                    mapref.current=map;
+                }}
+
+            >
                 {ubicacion.map((location, index) => {
                     const lat = parseFloat(location.incident_latitude);
                     const lng = parseFloat(location.incident_longitude);
@@ -40,8 +51,8 @@ function MapContainer() {
                             key={index}
                             position={{ lat, lng }}
                             title={location.incident_name}
-                        // info={location.incident_url}
-                            onClick={()=>
+                            // info={location.incident_url}
+                            onClick={() =>
                                 setSelect({
                                     lat,
                                     lng,
@@ -52,20 +63,24 @@ function MapContainer() {
                     )
                 })}
                 {select && (
-                    <CustomPopup
-                        position={{ lat: select.lat, lng: select.lng }}
-                        content={
-                            <div>
-                                <p>Incident ID: {select.location.incident_id}</p>
-                                <p>Incident Type/Name: {select.location.incident_name}</p>
-                                <a href={select.location.incident_url} target="_blank" rel="noopenr noreferrer">
-                                    Learn More
-                                </a>
-                            </div>
-                        }
-                    >
+                    <div ref={popupContentRef}>
+                        <div>
+                            {/* <button onClick={() => setSelect(null)} className="popup-close-button">close</button> */}
+                            <h3>Incident Name/Type: {select.location.incident_name}</h3>
+                            <p>ID: {select.location.incident_id}</p>
+                            <a href={select.location.incident_url} target="_blank" rel="noopener noreferrer">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                )}
 
-                    </CustomPopup>
+                {select && popupContentRef.current && (
+                    <PopUP
+                        map={mapref.current}
+                        position={new window.google.maps.LatLng(select.lat, select.lng)}
+                        content={popupContentRef.current}
+                    />
                 )}
             </GoogleMap>
         </LoadScript>
