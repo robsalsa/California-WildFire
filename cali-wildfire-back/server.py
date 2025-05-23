@@ -6,7 +6,7 @@ CORS(app)   #just think of this as a type of adapter that will allow for the bac
 
 @app.route("/mem") #Json testing
 def test():
-    return {"mem": ["good", "morning", "USA", "!"]}
+    return {"mem": ["the", "backend", "works", "also this", "is an python array"]}
     
 
 if __name__ == "__main__":
