@@ -4,6 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
+venv
+.env
+# HERE IS WHERE THE FREAKING THINGY GETS HIDDEN
+
+
 
 # testing
 /coverage
@@ -17,6 +22,8 @@
 .env.development.local
 .env.test.local
 .env.production.local
+__pycache__
+#idk python enough to tell you why this shouldnt go into git but maybe it has to do with some memory being recorded
 
 npm-debug.log*
 yarn-debug.log*
