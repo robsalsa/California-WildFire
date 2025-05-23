@@ -21,7 +21,7 @@ export const Home = () => {
                     <h2>Local Fire & Other News</h2>
                     <div className="main-content">
                         <section id="fire-map-view" className="view-box">
-                           <div id= "actual-map" style={{height: "100%", width: "700px"}}>
+                           <div id= "actual-map" style={{height: "100%", width: "900px"}}>
                                 {/* Map size is kinda stuck here because im scared to move it into the CSS */}
                                 <MapContainer />
                                 {/* <MapContainer /> */}
