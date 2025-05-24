@@ -1,13 +1,29 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
 venv
+/.venv
 .env
 # HERE IS WHERE THE FREAKING THINGY GETS HIDDEN
 
+# Pytest cache
+.pytest_cache/
+
+# MyPy cache
+.mypy_cache/
+
+# Flask/Python specific
+instance/
+*.db
+*.sqlite3
 
 
 # testing
@@ -28,3 +44,4 @@ __pycache__
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+node_modules
