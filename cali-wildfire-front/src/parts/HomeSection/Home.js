@@ -8,13 +8,13 @@ import "./Home.css";
 export const Home = () => {
     return (
         <div className="home-container">
-            <section id="notification-bar" className="notification-bar">
+            {/* <section id="notification-bar" className="notification-bar">
                 <h1>Cali-Wildfire Watch</h1>
                 <nav>
                     <button id="placeholder">Placeholder1</button>
                     <button id="placeholder2">Placeholder2</button>
                 </nav>
-            </section>
+            </section> */}
 
             <main className="content-wrapper">
                 <section id="box-container" className="box-container">

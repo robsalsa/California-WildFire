@@ -16,7 +16,7 @@ header h1 {
     font-style: italic;
 }
 
-nav a {
+/* nav a {
     color: #f5f3f3;
     text-decoration: none;
     margin: 0 20px;
@@ -26,7 +26,7 @@ nav a {
 
 nav a:hover {
     color: #c7a37a;
-}
+} */
 
 /* bunger options */
 .bm-burger-button {
