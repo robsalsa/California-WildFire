@@ -18,19 +18,6 @@ header h1 {
 /* header and header h1 -- is the format, font, size, and color */
 /* also its the reason the header is stuck at the top and banner is a little fadded */
 
-nav a {
-    color: #f5f3f3;
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #c77a7a;
-}
-/* nav a and nav a:hover -- is everything inside of the burger stack. 
-For example the hover color of "Home" and "Previous Fires" */
 
 /* bunger options */
 .bm-burger-button {

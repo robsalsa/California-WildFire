@@ -3,10 +3,14 @@ import './Header.css';
 import { slide as Menu } from 'react-burger-menu';
 import {Link} from "react-router-dom";
 import '../WildfireTimelineSection/Timeline';
+
+import '../ComingSoon/ComingSoon';
+
 //everything up here acts like Java or Python imports the ONLY ONES that are different is the "import '../WildfireTimelineSection/Timeline';"
 //Reason for it is because I have it linked in the header. 
 
 //This is the header section the point of this is to reserve some space from the top of ALL pages.
+
 
 
 
@@ -29,7 +33,7 @@ const Header = () =>{
                 <a href ="/#thing4">thing4</a>
                 
                 <Link to="/link2">link1</Link> */}
-                <Link to="/WildfireTimelineSection">Previous Fires</Link>
+                <Link to="/ComingSoon">Coming Soon!</Link>
             </Menu>
         </header>
     );
