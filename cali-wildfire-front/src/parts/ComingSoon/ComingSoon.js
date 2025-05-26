@@ -16,6 +16,13 @@ const ComingSoon = () => {
 
             <section id="feats-to-come-container" className="feats-to-come-container">
                 <h2>Things to Come</h2>
+                <h3>Home Page</h3>
+                <ul>
+                    <li>Map Legend and Icons</li>
+                    <li>Live Statistical Graphs of Data</li>
+                    <li>Data Cleaning and Summary/Linking of Incident Reports</li>
+                </ul>
+                <h3>Time Line Page</h3>
                 <ul>
                     <li>View archived data from past fire incident reports across California</li>
                     <li>Access incident reports including:

@@ -42,12 +42,21 @@ export const Home = () => {
 
                         </ul>
                     </section>
+                    <section id="legend-container">
+                        <h2> Map Legend</h2>
+                        <ul>
+                            <li> <a href="/ComingSoon">*!* Features Coming Soon *!* </a></li>
+                        </ul>
+                    </section>
                 </aside>
             </main>
 
 
             <div className="under-home-container">
-                <h1>maybe graphs can go here either as a baked-in thing or a component like the Map container</h1>
+                <img
+                    src=""
+                    alt="Loading..." 
+                />
             </div>
         </div>
     );
