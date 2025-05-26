@@ -33,8 +33,19 @@ export const Home = () => {
 
                 <aside id="sidebar" className="sidebar">
                     <section id="recent-fires">
-                        <h2> Recent/Current Fires</h2>
-                        <p> news news news news news news news so good news news news </p>
+                        <h2> Active Fire Incident Reports</h2>
+                        <h3>Updates: </h3>
+                        <ul>
+                            <li> <a href="/ComingSoon">*!* Features Coming Soon *!* </a></li>
+                            
+                        </ul>
+                        <h3> Currently You Are Viewing: </h3>
+                        <ul>
+                            <li> Fire Incident Reports Year(s): 2025-2003 </li>
+                            <li> Fire Incident Reports Provided by: The California Department of Forestry and Fire Protection (CAL FIRE) <a href="https://www.fire.ca.gov/about">Learn More</a> </li>
+                            
+
+                        </ul>
                     </section>
                 </aside>
             </main>

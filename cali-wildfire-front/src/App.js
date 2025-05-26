@@ -3,9 +3,14 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './parts/HeaderSection/Header';
+import Footer from './parts/FooterSection/Footer';
 
 import {Home} from './parts/HomeSection/Home';
 import { Timeline } from './parts/WildfireTimelineSection/Timeline';
+
+import ComingSoon from './parts/ComingSoon/ComingSoon';
+import NotFound from './parts/NotFound/NotFound';
+
 
 
 function App() {
@@ -20,11 +25,12 @@ function App() {
 
 
 
-
-          <Route path="*" element={<h1>404 - Page Not found!</h1>} />
+          <Route path="/ComingSoon" element={<ComingSoon />} />
+          <Route path="*" element={<NotFound />} />
 
 
         </Routes>
+          <Footer />
       </Router>
     </div>
   );

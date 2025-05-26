@@ -1,0 +1,19 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color:#FFF0DC;
+    color: #333;
+    /* line-height:2; */
+
+}
+
+.coming-soon-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+.title-soon-container{
+    display:center;
+}
