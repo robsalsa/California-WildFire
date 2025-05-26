@@ -6,7 +6,7 @@ import Header from './parts/HeaderSection/Header';
 import Footer from './parts/FooterSection/Footer';
 
 import {Home} from './parts/HomeSection/Home';
-import { Timeline } from './parts/WildfireTimelineSection/Timeline';
+// import { Timeline } from './parts/WildfireTimelineSection/Timeline';
 
 
 import ComingSoon from './parts/ComingSoon/ComingSoon';
@@ -23,7 +23,7 @@ function App() {
 
         <Routes>
           <Route path="/" element ={<Home />} />  
-          <Route path="/WildfireTimelineSection" element={<Timeline />} />
+          {/* <Route path="/WildfireTimelineSection" element={<Timeline />} /> */}
               {/* This is the only thing that you should interact with the most since its where everything is redirected.
               The way I can explain is that think of this as a train station. You start at "/" or http://localhost:3000
               and if you would like to reach the timeline page you will hop on station "/WildfireTimelineSection" or http://localhost:3000/WildfireTimelineSection.
@@ -37,16 +37,7 @@ function App() {
 
 
         </Routes>
-          <Footer />
-
-
-          <Route path="*" element={<h1>404 - Page Not found!</h1>} />
-                {/* This is a very nice way to handle incorrect links or paths. If you would like to test this in the url input this:
-                http://localhost:3000/anythingnotlinkedendsuphere */}
-
-        </Routes>
-          {/* to continue the thought of the <Header /> here you can also add a Footer that will persist too */}
-
+        <Footer />
       </Router>
     </div>
   );

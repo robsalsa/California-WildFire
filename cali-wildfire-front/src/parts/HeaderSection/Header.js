@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import { slide as Menu } from 'react-burger-menu';
 import {Link} from "react-router-dom";
-import '../WildfireTimelineSection/Timeline';
+// import '../WildfireTimelineSection/Timeline';
 
 import '../ComingSoon/ComingSoon';
 
