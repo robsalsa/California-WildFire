@@ -15,18 +15,9 @@ header h1 {
     letter-spacing: 1.5px;
     font-style: italic;
 }
+/* header and header h1 -- is the format, font, size, and color */
+/* also its the reason the header is stuck at the top and banner is a little fadded */
 
-/* nav a {
-    color: #f5f3f3;
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #c7a37a;
-} */
 
 /* bunger options */
 .bm-burger-button {
@@ -57,3 +48,10 @@ nav a:hover {
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
+
+/* .bm-burger- buttons, bars, bars-hover, wrap, overlay, and menu -- 
+is not mine. It was from a package. 
+If you wish to continue to use this stack or ever manipulate the 
+burger please install this through your VSCode terminal:
+ npm install react-burger-menu --save */
+

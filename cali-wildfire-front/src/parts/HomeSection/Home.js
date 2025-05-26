@@ -3,18 +3,13 @@ import { Link } from "react-router-dom";
 import MapContainer from '../MapSection/MapContainer';
 // API is needed for this to work
 import "./Home.css";
-
+//these are nessary imports for a simple page. Just have those three things and youll be fine
+//make sure the "./(Name of CSS file)" is correct or else the page will refuse to work
 
 export const Home = () => {
     return (
         <div className="home-container">
-            {/* <section id="notification-bar" className="notification-bar">
-                <h1>Cali-Wildfire Watch</h1>
-                <nav>
-                    <button id="placeholder">Placeholder1</button>
-                    <button id="placeholder2">Placeholder2</button>
-                </nav>
-            </section> */}
+          
 
             <main className="content-wrapper">
                 <section id="box-container" className="box-container">
@@ -50,11 +45,10 @@ export const Home = () => {
                 </aside>
             </main>
 
+
             <div className="under-home-container">
                 <h1>maybe graphs can go here either as a baked-in thing or a component like the Map container</h1>
             </div>
-
-
         </div>
     );
 };

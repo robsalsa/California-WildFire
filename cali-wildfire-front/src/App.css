@@ -38,3 +38,12 @@ header h1{
     font-size: 2rem;
 }
 
+/* Unlike the other CSS files inside of "parts" this one affects every single page in discriminatly
+    What I mean by that is better explained through an example. So imagine you make a new page and 
+    make a page that uses a Header and inside of that Header you use H1 or a Body. Assuming you have a
+    blank CSS for that new page. This page will affect that new page. 
+
+Think of this as a generic format while the CSS files inside of "parts" are more Tailored Made for that section.
+For example the burger stack and the sidebar in the other files. 
+
+*/
