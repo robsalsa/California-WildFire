@@ -22,7 +22,7 @@ const ComingSoon = () => {
                     <li>Live Statistical Graphs of Data</li>
                     <li>Data Cleaning and Summary/Linking of Incident Reports</li>
                 </ul>
-                <h3>Time Line Page</h3>
+                <h3>Timeline Page</h3>
                 <ul>
                     <li>View archived data from past fire incident reports across California</li>
                     <li>Access incident reports including:

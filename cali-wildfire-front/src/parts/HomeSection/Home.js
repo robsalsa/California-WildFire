@@ -25,7 +25,6 @@ export const Home = () => {
                         </section>
                     </div>
                 </section>
-
                 <aside id="sidebar" className="sidebar">
                     <section id="recent-fires">
                         <h2> Active Fire Incident Reports</h2>
@@ -45,19 +44,23 @@ export const Home = () => {
                     <section id="legend-container">
                         <h2> Map Legend</h2>
                         <ul>
+                            <li>Pins: Location of Fire Incidents        (Click Pins to learn more!)</li>
                             <li> <a href="/ComingSoon">*!* Features Coming Soon *!* </a></li>
                         </ul>
                     </section>
+                    <section id="data-container">
+                        <h1>Incident Data Across the Year(s) </h1>
+                                        <img src="Maia's Thing.png" alt="Loading..." style={{ height: "75%", width: "100%" }} />
+
+                    </section>
                 </aside>
+                
             </main>
+             {/* <div className="under-home-container">
+                <img src="Maia's Thing.png" alt="Loading..." style={{ height: "75%", width: "700px" }} />
 
+            </div> */}
 
-            <div className="under-home-container">
-                <img
-                    src=""
-                    alt="Loading..." 
-                />
-            </div>
         </div>
     );
 };

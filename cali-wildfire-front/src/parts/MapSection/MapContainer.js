@@ -66,8 +66,10 @@ function MapContainer() {
                     <div ref={popupContentRef}>
                         <div>
                             {/* <button onClick={() => setSelect(null)} className="popup-close-button">close</button> */}
-                            <h3>Incident Name/Type: {select.location.incident_name}</h3>
-                            <p>ID: {select.location.incident_id}</p>
+                            <h3>Incident Name: </h3>
+                            <p>{select.location.incident_name}</p>
+                            <p>Date of Containment: {select.location.incident_date_extinguished}</p>
+                            <p>Incident County: {select.location.incident_county}</p>
                             <a href={select.location.incident_url} target="_blank" rel="noopener noreferrer">
                                 Learn More
                             </a>
