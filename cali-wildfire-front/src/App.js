@@ -4,13 +4,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MyComponent from "/Users/eanyakpor/Projects/wild-fire-website/California-WildFire/cali-wildfire-front/src/parts/MyComponent.js";
 
 import Header from './parts/HeaderSection/Header';
+import Footer from './parts/FooterSection/Footer';
 
 import {Home} from './parts/HomeSection/Home';
-// import { Timeline } from './parts/WildfireTimelineSection/Timeline';
+// // import { Timeline } from './parts/WildfireTimelineSection/Timeline';
 
-//HERE IS WHERE IMPORTS ARE SUPER DUPER IMPORTANT!!!!!!!!!!!!!!
-//Reason for that is because without them your routes will not work and lead to the 404 page. 
-//Honestly just keep track what you page you will use.
+
+import ComingSoon from './parts/ComingSoon/ComingSoon';
+import NotFound from './parts/NotFound/NotFound';
+
 
 function App() {
   return (
@@ -32,12 +34,12 @@ function App() {
 
 
 
-          <Route path="*" element={<h1>404 - Page Not found!</h1>} />
-                {/* This is a very nice way to handle incorrect links or paths. If you would like to test this in the url input this:
-                http://localhost:3000/anythingnotlinkedendsuphere */}
+          <Route path="/ComingSoon" element={<ComingSoon />} />
+          <Route path="*" element={<NotFound />} />
+
 
         </Routes>
-          {/* to continue the thought of the <Header /> here you can also add a Footer that will persist too */}
+        <Footer />
       </Router>
     </div>
   );
