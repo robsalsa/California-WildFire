@@ -33,6 +33,7 @@ const Header = () =>{
                 <a href ="/#thing4">thing4</a>
                 
                 <Link to="/link2">link1</Link> */}
+                {/* <Link to="/WildfireTimelineSection">Previous Fires</Link> */}
                 <Link to="/ComingSoon">Coming Soon!</Link>
             </Menu>
         </header>

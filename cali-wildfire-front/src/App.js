@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MyComponent from "/Users/eanyakpor/Projects/wild-fire-website/California-WildFire/cali-wildfire-front/src/parts/MyComponent.js";
 
 import Header from './parts/HeaderSection/Header';
 import Footer from './parts/FooterSection/Footer';
 
 import {Home} from './parts/HomeSection/Home';
-// import { Timeline } from './parts/WildfireTimelineSection/Timeline';
+// // import { Timeline } from './parts/WildfireTimelineSection/Timeline';
 
 
 import ComingSoon from './parts/ComingSoon/ComingSoon';
@@ -17,6 +18,7 @@ function App() {
   return (
     <div className="no-app">
           {/* I forgot what this means but lets just say its the java main function */}
+        <MyComponent />
       <Router>
         <Header/>
           {/* this is a unique thing but all it is the reason the header persists on every page with out it being tied to one specific page */}

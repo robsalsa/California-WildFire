@@ -56,10 +56,24 @@ export const Home = () => {
                 </aside>
                 
             </main>
-             {/* <div className="under-home-container">
-                <img src="Maia's Thing.png" alt="Loading..." style={{ height: "75%", width: "700px" }} />
 
-            </div> */}
+<<<<<<<<< Temporary merge branch 1
+{/* main ClassName: Content Wrapper 
+	is the actual look of the page
+
+	Section ID: Box Container ClassName: Box Container
+		is the MAIN PAGE!!! This means that the actual page elements, components, and features are all going to end up here!
+		
+		NOTE: Either place your map API inside of Section ID: Fire-Map-View or inside of Div ID: Actual Map. 
+
+	Aside ID: Sidebar 
+		Is exactly as the name means its the actual side bar.  */}
+=========
+            <div className="under-home-container">
+                <h1>maybe graphs can go here either as a baked-in thing or a component like the Map container</h1>
+            </div>
+
+>>>>>>>>> Temporary merge branch 2
 
         </div>
     );

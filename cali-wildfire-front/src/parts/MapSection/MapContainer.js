@@ -3,7 +3,6 @@ import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import Papa from "papaparse";
 import PopUP from "../PopUp/PopUP";
 
-
 const containerStyle = {
     width: '100%',
     height: '500px'
@@ -22,12 +21,12 @@ function MapContainer() {
     const popupContentRef = useRef(null);
 
     useEffect(() => {
-        fetch("/mapdataall.csv")
-            .then((response) => response.text())
-            .then((csvText) => {
-                const parsed = Papa.parse(csvText, { header: true });
-                setUbicacion(parsed.data);
-            });
+        fetch("http://127.0.0.1:5000/fire-coordinates")
+            .then((response) => response.json()) // Parse as JSON
+            .then((data) => {
+                setUbicacion(data); // Use data directly
+            })
+            .catch((err) => console.error("Error fetching fire data:", err));
     }, []);
 
     return (
@@ -41,23 +40,22 @@ function MapContainer() {
                 }}
 
             >
-                {ubicacion.map((location, index) => {
-                    const lat = parseFloat(location.incident_latitude);
-                    const lng = parseFloat(location.incident_longitude);
+                {ubicacion.map((fire, index) => {
+                    const lat = parseFloat(fire.latitude);
+                    const lng = parseFloat(fire.longitude);
                     if (isNaN(lat) || isNaN(lng)) return null;
 
                     return (
                         <Marker
-                            key={index}
-                            position={{ lat, lng }}
-                            title={location.incident_name}
-                            // info={location.incident_url}
-                            onClick={() =>
-                                setSelect({
-                                    lat,
-                                    lng,
-                                    location,
-                                })
+                        key={fire.unique_id || index}
+                        position={{ lat, lng }}
+                        title={fire.name}
+                        onClick={() =>
+                            setSelect({
+                                lat,
+                                lng,
+                                fire,
+                            })
                             }
                         />
                     )
@@ -66,13 +64,9 @@ function MapContainer() {
                     <div ref={popupContentRef}>
                         <div>
                             {/* <button onClick={() => setSelect(null)} className="popup-close-button">close</button> */}
-                            <h3>Incident Name: </h3>
-                            <p>{select.location.incident_name}</p>
-                            <p>Date of Containment: {select.location.incident_date_extinguished}</p>
-                            <p>Incident County: {select.location.incident_county}</p>
-                            <a href={select.location.incident_url} target="_blank" rel="noopener noreferrer">
-                                Learn More
-                            </a>
+                            <h3>Incident Name: {select.fire.name}</h3>
+                            <p>Unique ID: {select.fire.unique_id}</p>
+                            <p>Status: {select.fire.is_active ? "🔥 Active" : "✅ Contained"}</p>
                         </div>
                     </div>
                 )}
